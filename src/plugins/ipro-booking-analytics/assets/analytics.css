@@ -1,0 +1,379 @@
+.ipro-ba-wrap {
+    max-width: 1100px;
+    margin: 20px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.ipro-ba-section--compact {
+    margin-bottom: 16px;
+}
+
+.ipro-ba-version-split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.ipro-ba-version-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 14px 16px;
+}
+
+.ipro-ba-version-card__label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.ipro-ba-version-card__metrics {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.ipro-ba-version-card__metrics strong {
+    color: #111;
+    font-size: 18px;
+    margin-right: 4px;
+}
+
+.ipro-ba-version-card__bar {
+    height: 4px;
+    background: #f0f0f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.ipro-ba-version-card__bar span {
+    display: block;
+    height: 100%;
+}
+
+/* ── Header ── */
+
+.ipro-ba-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+.ipro-ba-header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.ipro-ba-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* ── Language Switcher ── */
+
+.ipro-ba-lang-switcher {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.ipro-ba-lang-btn {
+    padding: 4px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #555;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.ipro-ba-lang-btn:hover {
+    border-color: #2196f3;
+    color: #2196f3;
+}
+
+.ipro-ba-lang-btn--active {
+    background: #2196f3;
+    color: #fff;
+    border-color: #2196f3;
+}
+
+.ipro-ba-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.ipro-ba-reset {
+    background: #ef5350 !important;
+    color: #fff !important;
+    border-color: #e53935 !important;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.ipro-ba-reset:hover {
+    background: #e53935 !important;
+}
+
+/* ── Periods ── */
+
+.ipro-ba-periods {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.ipro-ba-period {
+    padding: 6px 16px;
+    border: none;
+    background: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+}
+
+.ipro-ba-period:hover {
+    color: #2196f3;
+}
+
+.ipro-ba-period--active {
+    color: #2196f3;
+    border-bottom: 2px solid #2196f3;
+}
+
+.ipro-ba-custom-range {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 12px;
+}
+
+.ipro-ba-custom-range input[type="date"] {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* ── KPI Cards ── */
+
+.ipro-ba-kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.ipro-ba-kpi {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 18px 16px;
+    text-align: center;
+}
+
+.ipro-ba-kpi__value {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+}
+
+.ipro-ba-kpi__label {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* ── Sections ── */
+
+.ipro-ba-section {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ipro-ba-section__title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 16px 0;
+    padding: 0;
+}
+
+/* ── Grid (2-col) ── */
+
+.ipro-ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.ipro-ba-grid > .ipro-ba-section {
+    margin-bottom: 0;
+}
+
+/* ── Chart Wraps ── */
+
+.ipro-ba-chart-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.ipro-ba-chart-wrap--small {
+    max-height: 280px;
+}
+
+/* ── Funnel ── */
+
+.ipro-ba-funnel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ipro-ba-funnel__step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.ipro-ba-funnel__bar {
+    height: 38px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    transition: width 0.4s ease;
+}
+
+.ipro-ba-funnel__val {
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ipro-ba-funnel__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ipro-ba-funnel__label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.ipro-ba-funnel__drop {
+    font-size: 11px;
+    color: #ef5350;
+    font-weight: 500;
+}
+
+/* ── Tables ── */
+
+.ipro-ba-table-wrap {
+    overflow-x: auto;
+    max-height: 340px;
+    overflow-y: auto;
+}
+
+.ipro-ba-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.ipro-ba-table th {
+    text-align: left;
+    padding: 8px 10px;
+    background: #f8f8f8;
+    border-bottom: 2px solid #e0e0e0;
+    font-weight: 600;
+    color: #555;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.ipro-ba-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.ipro-ba-table tbody tr:hover {
+    background: #fafafa;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+    .ipro-ba-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ipro-ba-kpis {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ipro-ba-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ipro-ba-funnel__step {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ipro-ba-funnel__bar {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .ipro-ba-kpis {
+        grid-template-columns: 1fr;
+    }
+}

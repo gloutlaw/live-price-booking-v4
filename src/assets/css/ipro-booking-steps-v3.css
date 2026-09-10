@@ -1,0 +1,584 @@
+/* Client booking wizard — 2-Step UI styles */
+
+/* ─── Step visibility ─── */
+.ipro-step-hidden {
+  display: none !important;
+}
+
+/* ─── Step Indicator ─── */
+.ipro-step-indicator {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  padding: 20px 0 30px !important;
+  margin-bottom: 10px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.ipro-step {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+  flex-shrink: 0 !important;
+}
+
+.ipro-step--active,
+.ipro-step--done {
+  opacity: 1;
+}
+
+.ipro-step__num {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  border-radius: 50% !important;
+  background: #d6d8d9;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  transition: background 0.3s;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.ipro-step--active .ipro-step__num {
+  background: #000;
+}
+
+.ipro-step--done .ipro-step__num {
+  background: #2e7d32;
+}
+
+.ipro-step__label {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  white-space: nowrap !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  line-height: 1.3 !important;
+  overflow: visible !important;
+  display: inline-block !important;
+  font-family: inherit !important;
+}
+
+.ipro-step__line {
+  width: 60px !important;
+  height: 2px !important;
+  background: #d6d8d9;
+  margin: 0 16px !important;
+  flex-shrink: 0 !important;
+}
+
+.ipro-step--done ~ .ipro-step__line {
+  background: #2e7d32;
+}
+
+/* ─── Price Block ─── */
+.ipro-price-block {
+  margin: 20px 0;
+  padding: 0;
+}
+
+.ipro-price-block__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px 24px;
+  gap: 16px;
+}
+
+.ipro-price-block__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ipro-price-block__label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ipro-price-block__value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+.ipro-price-block__return {
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+.ipro-price-block__method {
+  display: none;
+}
+
+.ipro-price-block__next {
+  flex-shrink: 0;
+  padding: 14px 36px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, opacity 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ipro-price-block__next:hover:not(:disabled) {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.ipro-price-block__next:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── Step 2 Header ─── */
+.ipro-step2-header {
+  margin-bottom: 20px;
+}
+
+.ipro-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  margin-bottom: 16px;
+}
+
+.ipro-back-btn:hover {
+  background: #f5f5f5;
+  border-color: #999;
+}
+
+/* ─── Summary Block ─── */
+.ipro-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+.ipro-summary__item {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.5;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+.ipro-summary__item strong {
+  color: #000;
+  font-weight: 700;
+}
+
+/* ─── Vehicle Capacity Info ─── */
+.ipro-vehicle-info {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.ipro-vehicle-info span {
+  font-size: 11px !important;
+  color: #888;
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-weight: 400 !important;
+}
+
+/* ─── Google Places pac-container override ─── */
+.pac-container {
+  z-index: 99999 !important;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+  font-family: inherit;
+}
+
+.pac-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+.pac-item:hover {
+  background: #f7f7f7;
+}
+
+.pac-item-query {
+  font-size: 14px;
+  color: #333;
+}
+
+/* ─── RTL Support ─── */
+html[dir="rtl"] .ipro-step-indicator {
+  direction: rtl;
+}
+
+html[dir="rtl"] .ipro-summary {
+  direction: rtl;
+}
+
+html[dir="rtl"] .ipro-back-btn {
+  direction: rtl;
+}
+
+html[dir="rtl"] .ipro-price-block__inner {
+  flex-direction: row-reverse;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .ipro-step-indicator {
+    padding: 16px 0 20px;
+  }
+
+  .ipro-step__label {
+    font-size: 12px;
+  }
+
+  .ipro-step__num {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .ipro-step__line {
+    width: 30px;
+    margin: 0 8px;
+  }
+
+  .ipro-price-block__inner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .ipro-price-block__value {
+    font-size: 24px;
+  }
+
+  .ipro-price-block__next {
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  .ipro-summary {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+
+  .ipro-vehicle-info {
+    gap: 4px;
+  }
+
+  .ipro-vehicle-info span {
+    font-size: 10px !important;
+    padding: 1px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ipro-step__label {
+    display: none;
+  }
+
+  .ipro-step__line {
+    width: 40px;
+  }
+}
+
+/* ─── Custom Autocomplete Dropdown ─── */
+.ipro-ac-dropdown {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 99999 !important;
+  background: #fff !important;
+  border: 1px solid #ddd !important;
+  border-top: none !important;
+  border-radius: 0 0 6px 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+  max-height: 280px !important;
+  overflow-y: auto !important;
+}
+
+.ipro-ac-item {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 10px 14px !important;
+  cursor: pointer !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  transition: background 0.15s !important;
+}
+
+.ipro-ac-item:last-child {
+  border-bottom: none !important;
+}
+
+.ipro-ac-item:hover {
+  background: #f5f5f5 !important;
+}
+
+.ipro-ac-main {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  line-height: 1.3 !important;
+}
+
+.ipro-ac-secondary {
+  font-size: 12px !important;
+  color: #888 !important;
+  margin-top: 2px !important;
+  line-height: 1.3 !important;
+}
+
+/* ─── Map Picker Modal ─── */
+
+#ipro-map-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  align-items: center;
+  justify-content: center;
+}
+
+.ipro-map-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.ipro-map-content {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  width: min(580px, 95vw);
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+.ipro-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #111;
+  border-bottom: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+#ipro-map-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  color: #888;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+#ipro-map-close:hover {
+  color: #000;
+  background: #f0f0f0;
+}
+
+#ipro-map-canvas {
+  width: 100%;
+  height: 380px;
+  flex-shrink: 0;
+}
+
+.ipro-map-footer {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+  flex-shrink: 0;
+}
+
+.ipro-map-addr {
+  flex: 1;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+  min-width: 0;
+  word-break: break-word;
+}
+
+#ipro-map-confirm {
+  flex-shrink: 0;
+  padding: 10px 24px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+#ipro-map-confirm:hover {
+  background: #222;
+  transform: translateY(-1px);
+}
+
+/* ─── Map picker icon button ─── */
+
+.ipro-map-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: #aaa;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+}
+
+.ipro-map-btn:hover {
+  color: #000;
+}
+
+.ipro-map-btn svg {
+  display: block;
+  fill: currentColor;
+}
+
+/* ─── Map modal responsive ─── */
+
+@media (max-width: 600px) {
+  .ipro-map-content {
+    width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    position: fixed;
+    inset: 0;
+  }
+
+  #ipro-map-canvas {
+    height: 55vh;
+  }
+
+  .ipro-map-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  #ipro-map-confirm {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+.ipro-map-zoom {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ipro-map-zoom__btn {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition: background 0.15s;
+  user-select: none;
+}
+
+.ipro-map-zoom__btn:hover {
+  background: #f5f5f5;
+}
+
+.ipro-map-zoom__btn:active {
+  background: #ebebeb;
+}
+
+/* Hide Google Maps attribution inside the picker modal */
+#ipro-map-canvas .gm-style-cc,
+#ipro-map-canvas a[href*="google.com/maps"],
+#ipro-map-canvas .gmnoprint,
+#ipro-map-canvas .gm-bundled-control {
+  display: none !important;
+}
